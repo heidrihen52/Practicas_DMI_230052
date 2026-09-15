@@ -5,6 +5,8 @@
 ## Repositorio de Prácticas para la Asignatura de Deesarrollo Movil Integral
 **Ingeniería en Desarrollo y Gestión de Software**
 
+**Alumno:** T.S.U. Adrián Pérez Jiménez
+
 **Docente:** M.T.I. Marco A. Ramírez Hernández  
 **Periodo:** Septiembre - Diciembre 2026
 
