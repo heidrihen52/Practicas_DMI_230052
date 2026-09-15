@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Arquitectura global · hello_world_app",
+    "quality_profile": "showcase",
+    "repository": { "url": "https://github.com/heidrihen52/Practicas_DMI_230052.git", "provider": "github", "link_mode": "web", "revision": "a41dd445077c1d244fd19d9eb56b0eaa72803a58" },
+    "viewBox": [1360, 800],
+    "views": [
+      { "id": "dart", "label": "Aplicación Dart", "focus": ["config", "assets", "app", "tests"], "note": "Código, configuración, recursos y prueba de widget." },
+      { "id": "build", "label": "Destinos", "focus": ["flutter", "android", "apple", "web", "desktop"], "note": "Flutter adapta la UI a cada runner incluido en el repositorio." }
+    ]
+  },
+  "components": [
+    { "id": "config", "type": "security", "label": "Configuración", "sublabel": "pubspec y análisis", "tag": "raíz", "pos": [45, 120], "size": [255, 90], "sources": [{ "path": "hello_world_app/pubspec.yaml", "label": "paquete y fuentes" }, { "path": "hello_world_app/analysis_options.yaml", "label": "linter" }] },
+    { "id": "assets", "type": "database", "label": "Recursos", "sublabel": "fonts/Satoshi", "tag": "assets", "pos": [45, 280], "size": [255, 90], "sources": [{ "path": "hello_world_app/fonts/Satoshi-Regular.otf", "label": "regular" }, { "path": "hello_world_app/fonts/Satoshi-Bold.otf", "label": "bold" }] },
+    { "id": "tests", "type": "external", "label": "Pruebas", "sublabel": "widget_test.dart", "tag": "test/", "pos": [45, 440], "size": [255, 90], "sources": [{ "path": "hello_world_app/test/widget_test.dart", "label": "smoke test" }] },
+    { "id": "app", "type": "frontend", "label": "Aplicación Flutter", "sublabel": "main.dart · MyApp · pantallas Counter", "tag": "lib/", "pos": [370, 245], "size": [310, 120], "sources": [{ "path": "hello_world_app/lib/main.dart", "line": 5, "end_line": 22, "label": "entrada y MaterialApp" }, { "path": "hello_world_app/lib/presentation/screens/counters/counter_functions_screen.dart", "label": "pantalla activa" }, { "path": "hello_world_app/lib/presentation/screens/counters/counter_screen.dart", "label": "pantalla alternativa" }] },
+    { "id": "flutter", "type": "cloud", "label": "Flutter SDK", "sublabel": "Material 3 · runtime · build", "tag": "framework", "pos": [740, 255], "size": [275, 100] },
+    { "id": "android", "type": "backend", "label": "Android", "sublabel": "Gradle · Kotlin · recursos", "tag": "android/", "pos": [1050, 65], "size": [255, 90], "sources": [{ "path": "hello_world_app/android/app/build.gradle.kts", "label": "módulo Gradle" }, { "path": "hello_world_app/android/app/src/main/kotlin/com/example/hello_world_app/MainActivity.kt", "label": "MainActivity" }] },
+    { "id": "apple", "type": "backend", "label": "Apple: iOS y macOS", "sublabel": "Swift · Xcode · assets", "tag": "ios/ · macos/", "pos": [1050, 235], "size": [255, 90], "sources": [{ "path": "hello_world_app/ios/Runner/AppDelegate.swift", "label": "iOS AppDelegate" }, { "path": "hello_world_app/macos/Runner/MainFlutterWindow.swift", "label": "ventana macOS" }] },
+    { "id": "web", "type": "frontend", "label": "Web", "sublabel": "HTML · manifest · iconos PWA", "tag": "web/", "pos": [1050, 405], "size": [255, 90], "sources": [{ "path": "hello_world_app/web/index.html", "label": "bootstrap web" }, { "path": "hello_world_app/web/manifest.json", "label": "PWA" }] },
+    { "id": "desktop", "type": "backend", "label": "Windows y Linux", "sublabel": "CMake · C++ · runners", "tag": "windows/ · linux/", "pos": [1050, 575], "size": [255, 90], "sources": [{ "path": "hello_world_app/windows/runner/main.cpp", "label": "Win32" }, { "path": "hello_world_app/linux/runner/main.cc", "label": "GTK" }] }
+  ],
+  "boundaries": [
+    { "kind": "region", "label": "Paquete hello_world_app", "wraps": ["config", "assets", "tests", "app"], "pad": 30 },
+    { "kind": "region", "label": "Runners y salida multiplataforma", "wraps": ["android", "apple", "web", "desktop"], "pad": 30 }
+  ],
+  "connections": [
+    { "id": "config-app", "from": "config", "to": "app", "label": "dependencias y tema", "variant": "security", "fromSide": "right", "toSide": "left" },
+    { "id": "assets-app", "from": "assets", "to": "app", "label": "fuente Satoshi", "fromSide": "right", "toSide": "left", "labelAt": [245, 390] },
+    { "id": "tests-app", "from": "tests", "to": "app", "label": "prueba MyApp", "variant": "dashed", "fromSide": "right", "toSide": "left" },
+    { "id": "app-flutter", "from": "app", "to": "flutter", "label": "widgets y estado", "variant": "emphasis", "fromSide": "right", "toSide": "left", "labelAt": [710, 379] },
+    { "id": "flutter-android", "from": "flutter", "to": "android", "fromSide": "right", "toSide": "left" },
+    { "id": "flutter-apple", "from": "flutter", "to": "apple", "fromSide": "right", "toSide": "left" },
+    { "id": "flutter-web", "from": "flutter", "to": "web", "fromSide": "right", "toSide": "left" },
+    { "id": "flutter-desktop", "from": "flutter", "to": "desktop", "fromSide": "right", "toSide": "left" }
+  ],
+  "cards": [
+    { "dot": "emerald", "title": "Estructura de lib/", "items": ["main() invoca runApp(MyApp) y activa CounterFunctionsScreen.", "CounterFunctionsScreen mantiene clickCounter con setState e incorpora CustomButton.", "CounterScreen está importada, pero no se usa como home."] },
+    { "dot": "cyan", "title": "Configuración y recursos", "items": ["pubspec.yaml usa Flutter, cupertino_icons y la familia Satoshi.", "analysis_options.yaml habilita flutter_lints y excluye los runners nativos.", "pubspec.lock resuelve las versiones del paquete."] },
+    { "dot": "amber", "title": "Cobertura de plataforma", "items": ["android/: Gradle, manifests, Kotlin y mipmaps.", "ios/ y macos/: proyectos Xcode, Swift, plist y assets.", "web/: index.html, manifest y recursos PWA; windows/ y linux/: CMake y C++."] },
+    { "dot": "rose", "title": "Verificación", "items": ["test/widget_test.dart bombea MyApp y busca Icons.add.", "La pantalla activa usa Icons.plus_one; esta diferencia puede hacer fallar la prueba actual."] }
+  ]
+}
