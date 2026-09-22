@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/home/adrian/Documentos/Practicas_DMI_230052/Practica02/hello_world_app/architecture.archify.json",
+  "output": "/home/adrian/Documentos/Practicas_DMI_230052/Practica02/hello_world_app/architecture.html",
+  "specification": {
+    "sha256": "39a9cd193abff84ebd28b4e11bd37a28b80c297e349752c3920f85f421f257a6",
+    "bytes": 23394
+  },
+  "artifact": {
+    "sha256": "4c6a99c513ca8f950e93ba1533b35997aa93e2aef317bb1878599e235760f51f",
+    "bytes": 869750
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  },
+  "evidence": {
+    "verified": true,
+    "repository": "https://github.com/heidrihen52/Practicas_DMI_230052",
+    "revision": "7b5a2ac6e1535117d43900ad412daf6728cb8e74",
+    "references": 47
+  }
+}

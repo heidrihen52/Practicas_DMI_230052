@@ -1,0 +1,122 @@
+{
+  "lib_dart_count": 3,
+  "lib_dart_files": [
+    "lib/main.dart",
+    "lib/presentation/screens/counters/counter_functions_screen.dart",
+    "lib/presentation/screens/counters/counter_screen.dart"
+  ],
+  "test_dart_count": 1,
+  "test_dart_files": [
+    "test/widget_test.dart"
+  ],
+  "total_dart_count": 4,
+  "platform_nodes": {
+    "android": "Android",
+    "ios": "iOS",
+    "web": "Web",
+    "windows": "Windows",
+    "linux": "Linux",
+    "macos": "macOS"
+  },
+  "all_six_platforms_independent": true,
+  "dart_file_nodes": {
+    "lib/main.dart": "entry",
+    "lib/presentation/screens/counters/counter_screen.dart": "counter-file",
+    "lib/presentation/screens/counters/counter_functions_screen.dart": "functions-file"
+  },
+  "stateful": [
+    "CounterScreen",
+    "CounterFunctionsScreen"
+  ],
+  "stateless": [
+    "MyApp",
+    "CustomButton"
+  ],
+  "states": [
+    "_CounterScreenState",
+    "_CounterFunctionsScreenState"
+  ],
+  "presentation_layer_preserved": true,
+  "project_configuration_fonts_testing_preserved": true,
+  "guided_views": [
+    {
+      "id": "execution",
+      "pressed": "true"
+    },
+    {
+      "id": "ui-state",
+      "pressed": "true"
+    },
+    {
+      "id": "cross-platform",
+      "pressed": "true"
+    },
+    {
+      "id": "project",
+      "pressed": "true"
+    },
+    {
+      "id": "configuration",
+      "pressed": "true"
+    }
+  ],
+  "interactions": {
+    "platforms": [
+      {
+        "id": "android",
+        "present": true
+      },
+      {
+        "id": "ios",
+        "present": true
+      },
+      {
+        "id": "web",
+        "present": true
+      },
+      {
+        "id": "windows",
+        "present": true
+      },
+      {
+        "id": "linux",
+        "present": true
+      },
+      {
+        "id": "macos",
+        "present": true
+      }
+    ],
+    "chapters": [
+      {
+        "id": "execution",
+        "pressed": "true"
+      },
+      {
+        "id": "ui-state",
+        "pressed": "true"
+      },
+      {
+        "id": "cross-platform",
+        "pressed": "true"
+      },
+      {
+        "id": "project",
+        "pressed": "true"
+      },
+      {
+        "id": "configuration",
+        "pressed": "true"
+      }
+    ],
+    "zoom": "125%",
+    "presentation": "true",
+    "search": "lib/ · Dart compartido1 linkBackend · shared · Una base para seis plataformas · CÓDIGO COMPARTIDOcounter_screen.dart2 linksBackend · counter-file · Archivo · screens/counters/ · ARCHIVO DARTCounterScreen2 linksFrontend · counter · StatefulWidget · createState() · CLASE · NO ES HOME_CounterScreenState2 linksBackend · counter-state · int clickCounter = 0 · STATE · build()Scaffold · Widget Tree2 linksFrontend · simple · AppBar → Text; Center → Column · 2 Text · FAB → Icon(plus_one)onPressed → ++1 linkBackend · counter-logic · setState(() {}) → build() · CALLBACK · clickCounter",
+    "selection": true
+  },
+  "source_files_modified": [],
+  "artifact": {
+    "sha256": "4c6a99c513ca8f950e93ba1533b35997aa93e2aef317bb1878599e235760f51f",
+    "bytes": 869750
+  }
+}

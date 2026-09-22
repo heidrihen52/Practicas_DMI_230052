@@ -1,0 +1,1055 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "hello_world_app · Flutter",
+    "quality_profile": "showcase",
+    "viewBox": [
+      1350,
+      670
+    ],
+    "views": [
+      {
+        "id": "execution",
+        "label": "Flutter App Execution",
+        "focus": [
+          "user",
+          "android",
+          "runtime",
+          "entry",
+          "runapp",
+          "root",
+          "functions"
+        ],
+        "note": "Inicio conceptual por Android; Runtime → plataforma expresa integración, no una llamada de arranque."
+      },
+      {
+        "id": "ui-state",
+        "label": "UI and State Flow",
+        "focus": [
+          "functions",
+          "functions-state",
+          "controls",
+          "custom",
+          "logic",
+          "render"
+        ],
+        "note": "Callbacks anónimos: reset dentro de setState; ±1 antes. El siguiente build actualiza Text."
+      },
+      {
+        "id": "cross-platform",
+        "label": "Cross Platform Architecture",
+        "focus": [
+          "shared",
+          "runtime",
+          "android",
+          "ios",
+          "web",
+          "windows",
+          "linux",
+          "macos"
+        ],
+        "note": "Seis destinos independientes del mismo código lib/. Web usa navegador; los demás, runners nativos."
+      },
+      {
+        "id": "project",
+        "label": "Project Structure",
+        "focus": [
+          "config",
+          "fonts",
+          "entry",
+          "counter-file",
+          "counter",
+          "simple",
+          "functions-file",
+          "functions",
+          "custom",
+          "controls"
+        ],
+        "note": "Archivos → clases → widgets. SRC abre evidencia. CounterScreen está importada; no hay navegación."
+      },
+      {
+        "id": "configuration",
+        "label": "Configuración y pruebas",
+        "focus": [
+          "config",
+          "fonts",
+          "tests",
+          "entry",
+          "root"
+        ],
+        "note": "flutter_test SDK; flutter_lints ^6.0.0. Test busca Icons.add, ausente en UI. Satoshi: 3 variantes registradas."
+      }
+    ],
+    "legend": {
+      "entries": {
+        "frontend": {
+          "label": "Clases / Screens / Widgets"
+        },
+        "backend": {
+          "label": "Archivo Dart / State / Función"
+        },
+        "external": {
+          "label": "Usuario / Plataforma / Runtime / Config / Font / Test"
+        }
+      }
+    },
+    "repository": {
+      "url": "https://github.com/heidrihen52/Practicas_DMI_230052",
+      "revision": "7b5a2ac6e1535117d43900ad412daf6728cb8e74"
+    }
+  },
+  "components": [
+    {
+      "id": "user",
+      "type": "external",
+      "label": "Usuario",
+      "sublabel": "Abre la aplicación",
+      "pos": [
+        28.5,
+        19.95
+      ],
+      "size": [
+        123.5,
+        34.199999999999996
+      ],
+      "tag": "USUARIO"
+    },
+    {
+      "id": "android",
+      "label": "Android",
+      "sublabel": "android/",
+      "pos": [
+        28.5,
+        94.05
+      ],
+      "size": [
+        123.5,
+        34.199999999999996
+      ],
+      "type": "external",
+      "tag": "PLATAFORMA / RUNNER",
+      "sources": [
+        {
+          "path": "Practica02/hello_world_app/android/app/src/main/AndroidManifest.xml"
+        },
+        {
+          "path": "Practica02/hello_world_app/android/app/build.gradle.kts"
+        },
+        {
+          "path": "Practica02/hello_world_app/android/app/src/main/kotlin/com/example/hello_world_app/MainActivity.kt"
+        }
+      ]
+    },
+    {
+      "id": "ios",
+      "label": "iOS",
+      "sublabel": "ios/",
+      "pos": [
+        28.5,
+        151.04999999999998
+      ],
+      "size": [
+        123.5,
+        34.199999999999996
+      ],
+      "type": "external",
+      "tag": "PLATAFORMA / RUNNER",
+      "sources": [
+        {
+          "path": "Practica02/hello_world_app/ios/Runner/AppDelegate.swift"
+        },
+        {
+          "path": "Practica02/hello_world_app/ios/Runner/SceneDelegate.swift"
+        },
+        {
+          "path": "Practica02/hello_world_app/ios/Runner/Info.plist"
+        }
+      ]
+    },
+    {
+      "id": "web",
+      "label": "Web",
+      "sublabel": "web/ · navegador",
+      "pos": [
+        28.5,
+        208.04999999999998
+      ],
+      "size": [
+        123.5,
+        34.199999999999996
+      ],
+      "type": "external",
+      "tag": "PLATAFORMA / RUNNER",
+      "sources": [
+        {
+          "path": "Practica02/hello_world_app/web/index.html"
+        },
+        {
+          "path": "Practica02/hello_world_app/web/manifest.json"
+        }
+      ]
+    },
+    {
+      "id": "windows",
+      "label": "Windows",
+      "sublabel": "windows/",
+      "pos": [
+        28.5,
+        265.05
+      ],
+      "size": [
+        123.5,
+        34.199999999999996
+      ],
+      "type": "external",
+      "tag": "PLATAFORMA / RUNNER",
+      "sources": [
+        {
+          "path": "Practica02/hello_world_app/windows/runner/main.cpp"
+        },
+        {
+          "path": "Practica02/hello_world_app/windows/runner/flutter_window.cpp"
+        },
+        {
+          "path": "Practica02/hello_world_app/windows/CMakeLists.txt"
+        }
+      ]
+    },
+    {
+      "id": "linux",
+      "label": "Linux",
+      "sublabel": "linux/",
+      "pos": [
+        28.5,
+        322.05
+      ],
+      "size": [
+        123.5,
+        34.199999999999996
+      ],
+      "type": "external",
+      "tag": "PLATAFORMA / RUNNER",
+      "sources": [
+        {
+          "path": "Practica02/hello_world_app/linux/runner/main.cc"
+        },
+        {
+          "path": "Practica02/hello_world_app/linux/runner/my_application.cc"
+        },
+        {
+          "path": "Practica02/hello_world_app/linux/CMakeLists.txt"
+        }
+      ]
+    },
+    {
+      "id": "macos",
+      "label": "macOS",
+      "sublabel": "macos/",
+      "pos": [
+        28.5,
+        379.05
+      ],
+      "size": [
+        123.5,
+        34.199999999999996
+      ],
+      "type": "external",
+      "tag": "PLATAFORMA / RUNNER",
+      "sources": [
+        {
+          "path": "Practica02/hello_world_app/macos/Runner/AppDelegate.swift"
+        },
+        {
+          "path": "Practica02/hello_world_app/macos/Runner/MainFlutterWindow.swift"
+        },
+        {
+          "path": "Practica02/hello_world_app/macos/Runner/Info.plist"
+        }
+      ]
+    },
+    {
+      "id": "runtime",
+      "type": "external",
+      "label": "Flutter Runtime",
+      "sublabel": "Framework / Engine",
+      "pos": [
+        270.75,
+        208.04999999999998
+      ],
+      "size": [
+        199.5,
+        45.6
+      ],
+      "tag": "FLUTTER · CONCEPTUAL",
+      "sources": [
+        {
+          "path": "Practica02/hello_world_app/linux/runner/my_application.cc"
+        },
+        {
+          "path": "Practica02/hello_world_app/windows/runner/flutter_window.cpp"
+        },
+        {
+          "path": "Practica02/hello_world_app/web/index.html"
+        }
+      ]
+    },
+    {
+      "id": "shared",
+      "label": "lib/ · Dart compartido",
+      "sublabel": "Una base para seis plataformas",
+      "pos": [
+        270.75,
+        94.05
+      ],
+      "size": [
+        199.5,
+        39.9
+      ],
+      "type": "backend",
+      "tag": "CÓDIGO COMPARTIDO",
+      "sources": [
+        {
+          "path": "Practica02/hello_world_app/lib/main.dart"
+        },
+        {
+          "path": "Practica02/hello_world_app/lib/presentation/screens/counters/counter_screen.dart"
+        },
+        {
+          "path": "Practica02/hello_world_app/lib/presentation/screens/counters/counter_functions_screen.dart"
+        }
+      ]
+    },
+    {
+      "id": "entry",
+      "type": "backend",
+      "label": "lib/main.dart",
+      "sublabel": "Archivo · punto de entrada",
+      "pos": [
+        532.0,
+        208.04999999999998
+      ],
+      "size": [
+        199.5,
+        37.9
+      ],
+      "tag": "ARCHIVO DART",
+      "sources": [
+        {
+          "path": "Practica02/hello_world_app/lib/main.dart"
+        }
+      ]
+    },
+    {
+      "id": "runapp",
+      "label": "main() → runApp()",
+      "sublabel": "runApp(MyApp())",
+      "pos": [
+        532.0,
+        270.75
+      ],
+      "size": [
+        199.5,
+        31.349999999999998
+      ],
+      "type": "backend",
+      "tag": "FUNCIÓN DE INICIO",
+      "sources": [
+        {
+          "path": "Practica02/hello_world_app/lib/main.dart"
+        }
+      ]
+    },
+    {
+      "id": "root",
+      "type": "frontend",
+      "label": "MyApp → MaterialApp",
+      "sublabel": "StatelessWidget · build()",
+      "pos": [
+        532.0,
+        327.75
+      ],
+      "size": [
+        199.5,
+        39.9
+      ],
+      "tag": "Material 3 · Colors.green · banner false",
+      "sources": [
+        {
+          "path": "Practica02/hello_world_app/lib/main.dart"
+        }
+      ]
+    },
+    {
+      "id": "counter-file",
+      "label": "counter_screen.dart",
+      "sublabel": "Archivo · screens/counters/",
+      "pos": [
+        788.5,
+        94.05
+      ],
+      "size": [
+        228.0,
+        39.9
+      ],
+      "type": "backend",
+      "tag": "ARCHIVO DART",
+      "sources": [
+        {
+          "path": "Practica02/hello_world_app/lib/presentation/screens/counters/counter_screen.dart"
+        }
+      ]
+    },
+    {
+      "id": "counter",
+      "type": "frontend",
+      "label": "CounterScreen",
+      "sublabel": "StatefulWidget · createState()",
+      "pos": [
+        1083.0,
+        94.05
+      ],
+      "size": [
+        228.0,
+        39.9
+      ],
+      "tag": "CLASE · NO ES HOME",
+      "sources": [
+        {
+          "path": "Practica02/hello_world_app/lib/presentation/screens/counters/counter_screen.dart"
+        }
+      ]
+    },
+    {
+      "id": "counter-state",
+      "label": "_CounterScreenState",
+      "sublabel": "int clickCounter = 0",
+      "pos": [
+        1083.0,
+        168.15
+      ],
+      "size": [
+        228.0,
+        39.9
+      ],
+      "type": "backend",
+      "tag": "STATE · build()",
+      "sources": [
+        {
+          "path": "Practica02/hello_world_app/lib/presentation/screens/counters/counter_screen.dart"
+        }
+      ]
+    },
+    {
+      "id": "simple",
+      "type": "frontend",
+      "label": "Scaffold · Widget Tree",
+      "sublabel": "AppBar → Text; Center → Column",
+      "pos": [
+        1083.0,
+        242.25
+      ],
+      "size": [
+        228.0,
+        39.9
+      ],
+      "tag": "2 Text · FAB → Icon(plus_one)",
+      "sources": [
+        {
+          "path": "Practica02/hello_world_app/lib/presentation/screens/counters/counter_screen.dart"
+        }
+      ]
+    },
+    {
+      "id": "counter-logic",
+      "label": "onPressed → ++",
+      "sublabel": "setState(() {}) → build()",
+      "pos": [
+        788.5,
+        234.25
+      ],
+      "size": [
+        228.0,
+        39.9
+      ],
+      "type": "backend",
+      "tag": "CALLBACK · clickCounter",
+      "sources": [
+        {
+          "path": "Practica02/hello_world_app/lib/presentation/screens/counters/counter_screen.dart"
+        }
+      ]
+    },
+    {
+      "id": "functions-file",
+      "label": "counter_functions_screen.dart",
+      "sublabel": "Archivo · screens/counters/",
+      "pos": [
+        788.5,
+        284.84999999999997
+      ],
+      "size": [
+        228.0,
+        51.9
+      ],
+      "type": "backend",
+      "tag": "CounterFunctionsScreen + CustomButton",
+      "sources": [
+        {
+          "path": "Practica02/hello_world_app/lib/presentation/screens/counters/counter_functions_screen.dart"
+        }
+      ]
+    },
+    {
+      "id": "functions",
+      "type": "frontend",
+      "label": "CounterFunctionsScreen",
+      "sublabel": "StatefulWidget · createState()",
+      "pos": [
+        1083.0,
+        327.75
+      ],
+      "size": [
+        228.0,
+        39.9
+      ],
+      "tag": "CLASE · HOME",
+      "sources": [
+        {
+          "path": "Practica02/hello_world_app/lib/presentation/screens/counters/counter_functions_screen.dart"
+        }
+      ]
+    },
+    {
+      "id": "functions-state",
+      "label": "_CounterFunctionsScreenState",
+      "sublabel": "int clickCounter = 0",
+      "pos": [
+        1083.0,
+        395.84999999999997
+      ],
+      "size": [
+        228.0,
+        51.9
+      ],
+      "type": "backend",
+      "tag": "STATE · build()",
+      "sources": [
+        {
+          "path": "Practica02/hello_world_app/lib/presentation/screens/counters/counter_functions_screen.dart"
+        }
+      ]
+    },
+    {
+      "id": "controls",
+      "type": "frontend",
+      "label": "Scaffold · Widget Tree",
+      "sublabel": "AppBar: Text + IconButton + Icon",
+      "pos": [
+        1083.0,
+        475.95
+      ],
+      "size": [
+        228.0,
+        39.9
+      ],
+      "tag": "FAB: Column · 3 CustomButton · 3 SizedBox",
+      "sources": [
+        {
+          "path": "Practica02/hello_world_app/lib/presentation/screens/counters/counter_functions_screen.dart"
+        }
+      ]
+    },
+    {
+      "id": "custom",
+      "label": "CustomButton",
+      "sublabel": "StatelessWidget · build()",
+      "pos": [
+        788.5,
+        401.84999999999997
+      ],
+      "size": [
+        228.0,
+        39.9
+      ],
+      "type": "frontend",
+      "tag": "FloatingActionButton → Icon",
+      "sources": [
+        {
+          "path": "Practica02/hello_world_app/lib/presentation/screens/counters/counter_functions_screen.dart"
+        }
+      ]
+    },
+    {
+      "id": "logic",
+      "type": "backend",
+      "label": "Callbacks: reset / −1 / +1",
+      "sublabel": "= 0 en setState; --/++ antes",
+      "pos": [
+        788.5,
+        475.95
+      ],
+      "size": [
+        228.0,
+        39.9
+      ],
+      "tag": "ANÓNIMOS · setState(() {})",
+      "sources": [
+        {
+          "path": "Practica02/hello_world_app/lib/presentation/screens/counters/counter_functions_screen.dart"
+        }
+      ]
+    },
+    {
+      "id": "render",
+      "type": "frontend",
+      "label": "Center → Column → 2 Text",
+      "sublabel": "Número · Click/Clicks · Satoshi",
+      "pos": [
+        788.5,
+        550.05
+      ],
+      "size": [
+        228.0,
+        39.9
+      ],
+      "tag": "ROJO < 0 · AZUL = 0 · VERDE > 0",
+      "sources": [
+        {
+          "path": "Practica02/hello_world_app/lib/presentation/screens/counters/counter_functions_screen.dart"
+        }
+      ]
+    },
+    {
+      "id": "config",
+      "type": "external",
+      "label": "Project Configuration",
+      "sublabel": "pubspec.yaml · Dart ^3.13.2",
+      "pos": [
+        270.75,
+        327.75
+      ],
+      "size": [
+        199.5,
+        39.9
+      ],
+      "tag": "Flutter SDK · cupertino_icons ^1.0.8",
+      "sources": [
+        {
+          "path": "Practica02/hello_world_app/pubspec.yaml"
+        },
+        {
+          "path": "Practica02/hello_world_app/pubspec.lock"
+        },
+        {
+          "path": "Practica02/hello_world_app/analysis_options.yaml"
+        }
+      ]
+    },
+    {
+      "id": "fonts",
+      "type": "external",
+      "label": "fonts/ · Satoshi",
+      "sublabel": "Light 100 · Regular · Bold 700",
+      "pos": [
+        270.75,
+        475.95
+      ],
+      "size": [
+        199.5,
+        39.9
+      ],
+      "tag": "3 REGISTRADAS / 10 OTF",
+      "sources": [
+        {
+          "path": "Practica02/hello_world_app/pubspec.yaml"
+        },
+        {
+          "path": "Practica02/hello_world_app/fonts/Satoshi-Light.otf"
+        },
+        {
+          "path": "Practica02/hello_world_app/fonts/Satoshi-Regular.otf"
+        }
+      ]
+    },
+    {
+      "id": "tests",
+      "type": "external",
+      "label": "Testing · widget_test.dart",
+      "sublabel": "pumpWidget(const MyApp())",
+      "pos": [
+        532.0,
+        94.05
+      ],
+      "size": [
+        199.5,
+        39.9
+      ],
+      "tag": "Icons.add ≠ Icons.plus_one",
+      "sources": [
+        {
+          "path": "Practica02/hello_world_app/test/widget_test.dart"
+        },
+        {
+          "path": "Practica02/hello_world_app/ios/RunnerTests/RunnerTests.swift"
+        },
+        {
+          "path": "Practica02/hello_world_app/macos/RunnerTests/RunnerTests.swift"
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "user-android",
+      "from": "user",
+      "to": "android",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "usa",
+      "labelDy": 19.95
+    },
+    {
+      "id": "runtime-android",
+      "from": "runtime",
+      "to": "android",
+      "fromSide": "left",
+      "toSide": "right",
+      "variant": "dashed",
+      "label": "integra",
+      "labelAt": [
+        177.65,
+        104.30999999999999
+      ]
+    },
+    {
+      "id": "runtime-ios",
+      "from": "runtime",
+      "to": "ios",
+      "fromSide": "left",
+      "toSide": "right",
+      "variant": "dashed",
+      "label": "integra",
+      "labelAt": [
+        177.65,
+        161.30999999999997
+      ]
+    },
+    {
+      "id": "runtime-web",
+      "from": "runtime",
+      "to": "web",
+      "fromSide": "left",
+      "toSide": "right",
+      "variant": "dashed",
+      "label": "integra",
+      "labelAt": [
+        177.65,
+        218.30999999999997
+      ]
+    },
+    {
+      "id": "runtime-windows",
+      "from": "runtime",
+      "to": "windows",
+      "fromSide": "left",
+      "toSide": "right",
+      "variant": "dashed",
+      "label": "integra",
+      "labelAt": [
+        177.65,
+        275.30999999999995
+      ]
+    },
+    {
+      "id": "runtime-linux",
+      "from": "runtime",
+      "to": "linux",
+      "fromSide": "left",
+      "toSide": "right",
+      "variant": "dashed",
+      "label": "integra",
+      "labelAt": [
+        177.65,
+        332.31
+      ]
+    },
+    {
+      "id": "runtime-macos",
+      "from": "runtime",
+      "to": "macos",
+      "fromSide": "left",
+      "toSide": "right",
+      "variant": "dashed",
+      "label": "integra",
+      "labelAt": [
+        177.65,
+        389.31
+      ]
+    },
+    {
+      "id": "shared-runtime",
+      "from": "shared",
+      "to": "runtime",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "usa SDK",
+      "labelDy": 19.95
+    },
+    {
+      "id": "runtime-entry",
+      "from": "runtime",
+      "to": "entry",
+      "variant": "dashed",
+      "label": "inicio"
+    },
+    {
+      "id": "entry-runapp",
+      "from": "entry",
+      "to": "runapp",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "define",
+      "labelDy": 19.95
+    },
+    {
+      "id": "runapp-root",
+      "from": "runapp",
+      "to": "root",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "monta",
+      "labelDy": 19.95
+    },
+    {
+      "id": "entry-counter-file",
+      "from": "entry",
+      "to": "counter-file",
+      "variant": "dashed",
+      "label": "import"
+    },
+    {
+      "id": "entry-functions-file",
+      "from": "entry",
+      "to": "functions-file",
+      "variant": "dashed",
+      "label": "import"
+    },
+    {
+      "id": "counter-file-counter",
+      "from": "counter-file",
+      "to": "counter",
+      "label": "contiene"
+    },
+    {
+      "id": "counter-counter-state",
+      "from": "counter",
+      "to": "counter-state",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "createState",
+      "labelDy": 19.95
+    },
+    {
+      "id": "counter-state-simple",
+      "from": "counter-state",
+      "to": "simple",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "build",
+      "labelDy": 19.95
+    },
+    {
+      "id": "simple-counter-logic",
+      "from": "simple",
+      "to": "counter-logic",
+      "label": "onPressed",
+      "labelAt": [
+        1049,
+        258
+      ]
+    },
+    {
+      "id": "functions-file-functions",
+      "from": "functions-file",
+      "to": "functions",
+      "label": "contiene"
+    },
+    {
+      "id": "root-functions",
+      "from": "root",
+      "to": "functions",
+      "label": "home",
+      "labelAt": [
+        907,
+        351
+      ]
+    },
+    {
+      "id": "functions-functions-state",
+      "from": "functions",
+      "to": "functions-state",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "createState",
+      "labelDy": 19.95
+    },
+    {
+      "id": "functions-state-controls",
+      "from": "functions-state",
+      "to": "controls",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "build",
+      "labelAt": [
+        1238,
+        462
+      ]
+    },
+    {
+      "id": "controls-custom",
+      "from": "controls",
+      "to": "custom",
+      "label": "compone",
+      "fromSide": "top",
+      "toSide": "right",
+      "via": [
+        [
+          1197.0,
+          458.84999999999997
+        ],
+        [
+          1049.75,
+          458.84999999999997
+        ],
+        [
+          1049.75,
+          421.8
+        ]
+      ],
+      "labelAt": [
+        1106.75,
+        458.84999999999997
+      ]
+    },
+    {
+      "id": "controls-logic",
+      "from": "controls",
+      "to": "logic",
+      "label": "onPressed",
+      "labelAt": [
+        1049.75,
+        497.03999999999996
+      ]
+    },
+    {
+      "id": "logic-render",
+      "from": "logic",
+      "to": "render",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "rebuild",
+      "labelDy": 19.95
+    },
+    {
+      "id": "controls-render",
+      "from": "controls",
+      "to": "render",
+      "label": "body",
+      "fromSide": "bottom",
+      "toSide": "right",
+      "via": [
+        [
+          1197.0,
+          570.0
+        ]
+      ],
+      "labelAt": [
+        1130.5,
+        570.0
+      ]
+    },
+    {
+      "id": "config-root",
+      "from": "config",
+      "to": "root",
+      "label": "tema / SDK"
+    },
+    {
+      "id": "config-fonts",
+      "from": "config",
+      "to": "fonts",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "registra",
+      "labelDy": 19.95
+    },
+    {
+      "id": "tests-entry",
+      "from": "tests",
+      "to": "entry",
+      "variant": "dashed",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "import",
+      "labelDy": 19.95
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Supported Platforms",
+      "wraps": [
+        "android",
+        "ios",
+        "web",
+        "windows",
+        "linux",
+        "macos"
+      ],
+      "pad": 14
+    },
+    {
+      "kind": "region",
+      "label": "Presentation Layer · lib/presentation/ · screens/counters/",
+      "wraps": [
+        "counter-file",
+        "counter",
+        "counter-state",
+        "simple",
+        "counter-logic",
+        "functions-file",
+        "functions",
+        "functions-state",
+        "controls",
+        "custom",
+        "logic",
+        "render"
+      ],
+      "pad": 20
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Código compartido",
+      "items": [
+        "Dart → Framework → Engine/integración → runner → SO. Web: navegador. SRC muestra los archivos reales."
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Detalle bajo demanda",
+      "items": [
+        "Selecciona, busca y amplía a FULL: widgets, callbacks y State. CounterScreen no tiene navegación."
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "pubspec y pruebas",
+      "items": [
+        "Flutter SDK; cupertino_icons ^1.0.8; flutter_test SDK; flutter_lints ^6.0.0. Material 3 verde; Satoshi; sin assets generales."
+      ]
+    }
+  ]
+}
