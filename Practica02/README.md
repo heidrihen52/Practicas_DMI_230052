@@ -28,4 +28,4 @@ A continuación se presentan las capturas de pantalla de la aplicación en ejecu
 
 <a name="arquitectura"></a>
 ## Diagrama y Estructura del Proyecto
-[Ver Arquitectura](https://heidrihen52.github.io/Practicas_DMI_230052/)
+[Ver Arquitectura](https://heidrihen52.github.io/Practicas_DMI_230052/Practica02/)
