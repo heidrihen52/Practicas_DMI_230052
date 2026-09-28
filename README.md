@@ -19,6 +19,6 @@ Este repositorio contendrá los resultados de las prácticas de la materia para 
 | No. | Nombre | Descripción | Ponderación | Estatus | Link |
 | :-: | :--- | :--- | :---: | :---: | :--- |
 | 1 | Metodología de Evaluación de la Materia | Transcribir en la libreta y comprender la metodología y las fechas de evaluación de la asignatura. | 5 firmas | 🟢 Concluida | — |
-| 2 | Mi Primera Aplicación Móvil con Flutter | Desarrollo de una aplicación móvil utilizando el framework **Flutter**, implementando **Stateless Widgets** y **Stateful Widgets**. | 25 firmas | 🟢 Concluida | [Ver Diagrama Interactivo de Arquitectura en GitHub Pages](https://heidrihen52.github.io/Practicas_DMI_230052/Practica02/architecture/) |
-| 3 | yes_no_app: Creación de Aplicación Móvil usando yesno.wtf | Desarrollo de una aplicación móvil con funcionalidad de chat estilo **WhatsApp**, utilizando la API **yesno.wtf** para generar respuestas dinámicas. | Pendiente | 🟢 Concluida | [Ver Diagrama de arquitectura en GitHub Pages](https://heidrihen52.github.io/Practicas_DMI_230052/Practica03/architecture/) |
+| 2 | Mi Primera Aplicación Móvil con Flutter | Desarrollo de una aplicación móvil utilizando el framework **Flutter**, implementando **Stateless Widgets** y **Stateful Widgets**. | 25 firmas | 🟢 Concluida | [Practica 02](./Practica02) |
+| 3 | yes_no_app: Creación de Aplicación Móvil usando yesno.wtf | Desarrollo de una aplicación móvil con funcionalidad de chat estilo **WhatsApp**, utilizando la API **yesno.wtf** para generar respuestas dinámicas. | Pendiente | 🟢 Concluida | [Practica 03](./Practica03/) |
 
