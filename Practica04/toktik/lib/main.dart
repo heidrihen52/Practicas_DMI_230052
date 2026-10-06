@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
-        title: 'TokTik',
+        title: 'Vdry',
         debugShowCheckedModeBanner: false,
         theme: AppTheme().getTheme(),
         home: const DiscoverScreen()

@@ -23,10 +23,33 @@ class _FullScreenPlayerState extends State<FullScreenPlayer> {
   void initState() {
     super.initState();
 
-    controller = VideoPlayerController.asset(widget.videoUrl)
+    controller = _createController(widget.videoUrl)
       ..setVolume(0)
       ..setLooping(true)
       ..play();
+  }
+
+  VideoPlayerController _createController(String source) {
+    final uri = Uri.tryParse(source);
+    final isNetwork = uri != null &&
+        (uri.scheme == 'http' || uri.scheme == 'https');
+
+    if (isNetwork) {
+      return VideoPlayerController.networkUrl(
+        Uri.parse(_directMediaUrl(source)),
+      );
+    }
+
+    return VideoPlayerController.asset(source);
+  }
+
+  /// Drive /view links are HTML pages, not MP4 streams.
+  String _directMediaUrl(String url) {
+    final match = RegExp(r'drive\.google\.com/file/d/([^/?]+)').firstMatch(url);
+    if (match != null) {
+      return 'https://drive.google.com/uc?export=download&id=${match.group(1)}';
+    }
+    return url;
   }
 
   @override
@@ -40,6 +63,12 @@ class _FullScreenPlayerState extends State<FullScreenPlayer> {
     return FutureBuilder(
       future: controller.initialize(),
       builder: (context, snapshot) {
+        if (snapshot.hasError) {
+          return const Center(
+            child: Icon(Icons.error_outline, color: Colors.white, size: 40),
+          );
+        }
+
         if (snapshot.connectionState != ConnectionState.done) {
           return const Center(child: CircularProgressIndicator(strokeWidth: 2));
         }
