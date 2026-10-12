@@ -1,3 +1,10 @@
-Browser tab: 1, Title: "Play hello_world_app", URL: "https://appetize.io/app/android/com.example.hello_world_app?device=nexus5&osVersion=11.0&toolbar=true&debug=true".
-There has been no change in the accessibility tree.
-The focused UI element is 0 AXWebArea Play hello_world_app, URL: appetize.io/app/android/com.example.hello_world_app?device=nexus5&osVersion=11.0&toolbar=true&debug=true
+Extracto transcrito del panel Debug Logs de Appetize durante la ejecución inicial.
+Fecha: 2026-10-12. Dispositivo: Nexus 5. Android: 11.0. Build: 1.0.0.
+
+W / hello_world_ap ( 5139) : Unexpected CPU variant for X86 using defaults: x86
+I / ndk_translation ( 5139) : Initialized NDK translation (arm), version 0.2.2
+E /flutter  ( 5139) : [ERROR:flutter/impeller/toolkit/egl/ egl.cc (56) ] EGL Error : Success  (12288)  in ../../../flutter/impeller/toolkit/egl/display.cc:161
+D / EGL_emulation ( 5139) : eglMakeCurrent: 0xeebc2f50: ver 3 0 (tinfo 0xeef35050) (first time) F/libc     ( 5139) : Fatal signal 11 (SIGSEGV), code 2 (SEGV_ACCERR), fault addr 0xe9fe7440 in tid 5203 (1.raster), pid 5139 (hello_world_app)
+
+La captura nexus5-android11-error.jpg conserva el panel de diagnóstico.
+El build 1.0.1 con Skia tampoco abrió en Nexus 5; ver nexus5-android11-version101.jpg.
