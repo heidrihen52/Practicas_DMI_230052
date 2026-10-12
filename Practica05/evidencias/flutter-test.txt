@@ -1,0 +1,16 @@
+Resolving dependencies...
+Downloading packages...
+  cupertino_icons 1.0.9 (2.0.0 available)
+  material_color_utilities 0.13.0 (0.13.1 available)
+  meta 1.18.3 (1.19.0 available)
+  test_api 0.7.12 (0.7.15 available)
+  vector_math 2.4.0 (2.4.3 available)
+Got dependencies!
+5 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+00:00 +0: loading /Users/adrian/Documents/Practicas_DMI_230052/Practica05/hello_world_app/test/widget_test.dart
+00:00 +0: Incremento, decremento, colores y ambos reinicios
+00:00 +1: Interfaz y botones en 360.0 x 640.0
+00:00 +2: Interfaz y botones en 412.0 x 915.0
+00:00 +3: Interfaz y botones en 640.0 x 360.0
+00:00 +4: All tests passed!
