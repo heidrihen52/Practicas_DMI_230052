@@ -116,12 +116,5 @@ git push origin Practica05 main
 ```
 
 [Ver rama de trabajo en GitHub](https://github.com/heidrihen52/Practicas_DMI_230052/tree/Practica05/Practica05) · [Ver historial de integración](https://github.com/heidrihen52/Practicas_DMI_230052/commits/main/). Los hashes concretos se registran en [evidencia de integración](./evidencias/git-integracion.txt).
+[Ver demo en Appetize](https://appetize.io/app/b_j6zv4n7hxxa5h4y2jenkj3s5qy).
 
-## Guion de demostración
-
-1. Mostrar el APK y explicar que procede del contador de Practica02.
-2. Abrir el enlace de Appetize e iniciar la sesión Android.
-3. Mostrar el cero azul, incrementar al uno verde y decrementar hasta un número rojo.
-4. Usar ambos reinicios y explicar la etiqueta Click/Clicks.
-5. Repetir las acciones en una segunda configuración de dispositivo y probar la orientación horizontal.
-6. Mostrar capturas y resultados, y explicar que la sesión de la nube depende de la conexión y de los recursos de la cuenta.
