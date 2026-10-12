@@ -1,33 +1,67 @@
 import 'package:flutter/material.dart';
-import 'package:toktik/domain/entities/video_post.dart';
-import 'package:toktik/infrastructure/models/local_video_model.dart';
-import 'package:toktik/domain/repositories/video_posts_repositories.dart';
-import 'package:toktik/shared/data/local_video_posts.dart';
 
-
+import '../../domain/entities/video_post.dart';
+import '../../domain/repositories/feed_repository.dart';
 
 class DiscoverProvider extends ChangeNotifier {
-  final VideoPostRepository videosRepository;
-
+  final FeedRepository repository;
   bool initialLoading = true;
+  bool loading = false;
+  bool hasMore = true;
+  bool _disposed = false;
+  int _page = 1;
   List<VideoPost> videos = [];
-
-  DiscoverProvider({
-    required this.videosRepository
-  });
-
-  //new(this.videosRepository);
-
+  List<String> unavailableSources = [];
+  String? error;
+  DiscoverProvider({required this.repository});
   Future<void> loadNextPage() async {
-
-    // await Future.delayed( const Duration(seconds: 2) );
-
-    final newVideos = await videosRepository.getTrendingVideosByPage(1);
-    
-    videos.addAll( newVideos );
-    initialLoading = false;
-    notifyListeners();
+    if (loading || !hasMore) return;
+    loading = true;
+    if (!_disposed) notifyListeners();
+    try {
+      FeedPage result;
+      if (repository is ProgressiveFeedRepository) {
+        result = const FeedPage([], []);
+        await for (final update
+            in (repository as ProgressiveFeedRepository).loadProgressively(
+              _page,
+            )) {
+          if (_disposed) return;
+          result = update;
+          final ids = videos.map((v) => v.id).toSet();
+          videos.addAll(update.videos.where((v) => ids.add(v.id)));
+          if (videos.isNotEmpty) initialLoading = false;
+          notifyListeners();
+        }
+      } else {
+        result = await repository.load(_page);
+      }
+      if (_disposed) return;
+      unavailableSources = result.unavailableSources;
+      final ids = videos.map((v) => v.id).toSet();
+      videos.addAll(result.videos.where((v) => ids.add(v.id)));
+      // No avanzar si la página falla por completo: permitir reintentar.
+      if (result.videos.isEmpty && result.unavailableSources.isNotEmpty) {
+        error = 'No se pudieron cargar los videos. Reintenta.';
+      } else {
+        error = null;
+        hasMore = result.videos.isNotEmpty;
+        _page++;
+      }
+    } catch (_) {
+      if (!_disposed) error = 'No se pudieron cargar los videos.';
+    } finally {
+      if (!_disposed) {
+        loading = false;
+        initialLoading = false;
+        notifyListeners();
+      }
+    }
   }
 
-
+  @override
+  void dispose() {
+    _disposed = true;
+    super.dispose();
+  }
 }

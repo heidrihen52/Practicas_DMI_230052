@@ -3,17 +3,24 @@
     <application
         android:label="Vdry"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher"
-        android:roundIcon="@mipmap/ic_launcher_round">
+        android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:launchMode="singleTop"
-            android:taskAffinity=""
             android:theme="@style/LaunchTheme"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:hardwareAccelerated="true"
             android:windowSoftInputMode="adjustResize">
+            <!-- Flutter descubre esta entrada estable en el APK y la abre explícitamente.
+                 El scheme evita que las consultas normales del launcher creen un
+                 segundo icono: estas no llevan URI. Los aliases siguen siendo
+                 las únicas entradas visibles y pueden cambiar de temporada. -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <data android:scheme="${applicationId}.flutter" />
+            </intent-filter>
             <!-- Specifies an Android theme to apply to this Activity as soon as
                  the Android process has started. This theme is visible to the user
                  while the Flutter UI initializes. After that, this theme continues
@@ -22,11 +29,48 @@
               android:name="io.flutter.embedding.android.NormalTheme"
               android:resource="@style/NormalTheme"
               />
+
+        </activity>
+        <!-- Entrada efímera del launcher; la sesión siempre pertenece a MainActivity. -->
+        <activity
+            android:name=".LauncherActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoDisplay"
+            android:taskAffinity=""
+            android:excludeFromRecents="true"
+            android:noHistory="true" />
+        <activity-alias android:name=".NormalIcon"
+            android:targetActivity=".LauncherActivity" android:enabled="true"
+            android:exported="true" android:icon="@mipmap/ic_launcher">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>
+        </activity-alias>
+        <activity-alias android:name=".HalloweenIcon"
+            android:targetActivity=".LauncherActivity" android:enabled="false"
+            android:exported="true" android:icon="@mipmap/ic_launcher_halloween">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".ChristmasIcon"
+            android:targetActivity=".LauncherActivity" android:enabled="false"
+            android:exported="true" android:icon="@mipmap/ic_launcher_christmas">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".ValentinesIcon"
+            android:targetActivity=".LauncherActivity" android:enabled="false"
+            android:exported="true" android:icon="@mipmap/ic_launcher_valentines">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
         <!-- Don't delete the meta-data below.
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
         <meta-data

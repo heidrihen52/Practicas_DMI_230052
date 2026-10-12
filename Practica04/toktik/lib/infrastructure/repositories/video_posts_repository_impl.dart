@@ -1,20 +1,14 @@
-import 'package:toktik/domain/datasources/video_posts_datasource.dart';
-import 'package:toktik/domain/entities/video_post.dart';
-import 'package:toktik/domain/repositories/video_posts_repositories.dart';
+import '../../domain/datasources/video_posts_datasource.dart';
+import '../../domain/entities/video_post.dart';
+import '../../domain/repositories/video_posts_repository.dart';
 
 class VideoPostsRepositoryImpl implements VideoPostRepository {
-  final VideoPostDatasource videosDataSource;
-  VideoPostsRepositoryImpl({required this.videosDataSource});
-
-  //VideoPostsRepositoryImpl{required this.videosDataSource});
-
+  final VideoPostDatasource videosDatasource;
+  VideoPostsRepositoryImpl({required this.videosDatasource});
   @override
-  Future<List<VideoPost>> getFavoriteVideosByUser(String userID) {
-    throw UnimplementedError();
-  }
-
+  Future<List<VideoPost>> getFavoriteVideosByUser(String userID) =>
+      videosDatasource.getFavoriteVideosByUser(userID);
   @override
-  Future<List<VideoPost>> getTrendingVideosByPage(int page) async {
-    return videosDataSource.getTrendingVideosByPage(page);
-  }
+  Future<List<VideoPost>> getTrendingVideosByPage(int page) =>
+      videosDatasource.getTrendingVideosByPage(page);
 }
