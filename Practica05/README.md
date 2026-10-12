@@ -1,7 +1,7 @@
 # Práctica 05: Publicación de la app en Appetize
 
-**Alumno:** T.S.U. Adrián Pérez Jiménez  
-**Aplicación base:** contador de [Práctica 02](../Practica02/)  
+**Alumno:** T.S.U. Adrián Pérez Jiménez
+**Aplicación base:** contador de [Práctica 02](../Practica02/)
 **Fecha:** 12 de octubre de 2026
 
 ## Objetivo
