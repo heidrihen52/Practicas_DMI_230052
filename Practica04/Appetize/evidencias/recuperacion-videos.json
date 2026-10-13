@@ -1,0 +1,80 @@
+[
+  {
+    "video": "1.mp4",
+    "origen_en_apk_debug": "assets/flutter_assets/assets/videos/playback/1.mp4",
+    "bytes": 12882007,
+    "sha256": "5e694c85865d4fdc1415674afcaba5d079681459665cc48a8fec67854d7885c9"
+  },
+  {
+    "video": "2.mp4",
+    "origen_en_apk_debug": "assets/flutter_assets/assets/videos/playback/2.mp4",
+    "bytes": 26403543,
+    "sha256": "ebeb77475890a8e1c036c0ae681411e36897e91e41ed7d2f5b8e50835a91cb4c"
+  },
+  {
+    "video": "3.mp4",
+    "origen_en_apk_debug": "assets/flutter_assets/assets/videos/playback/3.mp4",
+    "bytes": 13510353,
+    "sha256": "52f21ce49c18d8b146dbe8dab984fcece1f98aca1ec772f695c3bb022e27b9a1"
+  },
+  {
+    "video": "4.mp4",
+    "origen_en_apk_debug": "assets/flutter_assets/assets/videos/playback/4.mp4",
+    "bytes": 14511909,
+    "sha256": "de0460c75db4f7538945ccbf05fa1e9a5317263d925336bf8059d55317cf01bc"
+  },
+  {
+    "video": "5.mp4",
+    "origen_en_apk_debug": "assets/flutter_assets/assets/videos/playback/5.mp4",
+    "bytes": 17759031,
+    "sha256": "efd24890961f37b20e6e9eecc3309542924561675e9134d4c43b90854ff8dcfb"
+  },
+  {
+    "video": "6.mp4",
+    "origen_en_apk_debug": "assets/flutter_assets/assets/videos/playback/6.mp4",
+    "bytes": 31467897,
+    "sha256": "9e7af9eb5108ec4eae1e5f945615685f2a3074a8c3702f259911bd87bf8ee73e"
+  },
+  {
+    "video": "7.mp4",
+    "origen_en_apk_debug": "assets/flutter_assets/assets/videos/playback/7.mp4",
+    "bytes": 33747388,
+    "sha256": "48c4180cd817c47f37bc33be82b1ac50ff62715cafc8c20e308dc036cda6dc1b"
+  },
+  {
+    "video": "8.mp4",
+    "origen_en_apk_debug": "assets/flutter_assets/assets/videos/playback/8.mp4",
+    "bytes": 20194492,
+    "sha256": "deac8b9c43124548b2fbcf6e8790ce13fe9bb920940d5bf8955b1f6e58f67801"
+  },
+  {
+    "video": "9.mp4",
+    "origen_en_apk_debug": "assets/flutter_assets/assets/videos/playback/9.mp4",
+    "bytes": 40945414,
+    "sha256": "42963b30a96271a489e65be6bc1f48188d9bf883e990e557aa7d0723c49afe6e"
+  },
+  {
+    "video": "10.mp4",
+    "origen_en_apk_debug": "assets/flutter_assets/assets/videos/playback/10.mp4",
+    "bytes": 24822331,
+    "sha256": "2b9edf621710ebd8e3fb737ccc45296191678df2ab94bfa15551875302d305c4"
+  },
+  {
+    "video": "11.mp4",
+    "origen_en_apk_debug": "assets/flutter_assets/assets/videos/playback/11.mp4",
+    "bytes": 5381473,
+    "sha256": "98b36d868dbafd0387f1a5254e4bbe1104aeef948b1443c7ecd6508c60af60a5"
+  },
+  {
+    "video": "12.mp4",
+    "origen_en_apk_debug": "assets/flutter_assets/assets/videos/playback/12.mp4",
+    "bytes": 8643810,
+    "sha256": "1528b13581596e11cef8bf5ae94a6c15746d35b3ca4e07805487a324da81585c"
+  },
+  {
+    "video": "13.mp4",
+    "origen_en_apk_debug": "assets/flutter_assets/assets/videos/playback/13.mp4",
+    "bytes": 8314435,
+    "sha256": "70d5c2a4ab3c2d936dfb562802347f18fa4688b1540b8754f4fa4bf92ef2d7cf"
+  }
+]
