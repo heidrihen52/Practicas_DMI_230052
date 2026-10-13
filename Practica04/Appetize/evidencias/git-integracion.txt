@@ -1,0 +1,6 @@
+*   dac7b78 Integrar publicacion de TokTik en Appetize
+|\
+| * 3aad550 Practica04: publicar TokTik Vdry en Appetize y documentar pruebas
+|/
+* 9cf70e5 Practica05: widgets_app
+* e30a07b Practica05: widgets_app

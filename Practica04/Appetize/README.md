@@ -142,3 +142,8 @@ No se publican llaves de firma, rutas de SDK locales ni archivos personales de c
 Mostrar el APK y su versión, abrir el enlace de Vdry en Appetize, reproducir un video en Para ti, guardar un favorito, cambiar de tema y mostrar Descubrir. Comparar las capturas del teléfono y la tablet y explicar que las APIs y la emulación dependen de la red y de la disponibilidad del servicio.
 
 Referencias del procedimiento: [carga de APK Android](https://docs.appetize.io/platform/app-management/uploading-apps/android) y [enlaces compartibles](https://docs.appetize.io/platform/sharing-apps).
+
+
+### Registro local de integración
+
+La entrega se registró en la rama `codex/toktik-appetize`, commit `3aad550`, y se integró con `git merge --no-ff` en la rama de trabajo existente `Practica05`. La [evidencia del historial](./evidencias/git-integracion.txt) conserva el commit de integración. Solo se incluyeron `Practica04/Appetize` y el README de Practica04; el APK y los MP4 siguen excluidos del commit por tamaño. No se realizó un push a GitHub en esta entrega.
