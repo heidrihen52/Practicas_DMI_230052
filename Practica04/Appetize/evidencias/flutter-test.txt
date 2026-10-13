@@ -1,0 +1,62 @@
+Resolving dependencies...
+Downloading packages...
+  archive 4.3.0 (4.5.2 available)
+  cli_util 0.4.2 (0.6.0 available)
+  code_assets 1.2.1 (2.1.0 available)
+  cupertino_icons 1.0.9 (2.0.0 available)
+  google_fonts 6.3.3 (9.0.0 available)
+  hooks 2.0.2 (2.2.0 available)
+  image 4.10.1 (4.12.0 available)
+  material_color_utilities 0.13.0 (0.13.1 available)
+  meta 1.18.3 (1.19.0 available)
+  objective_c 9.5.0 (9.6.2 available)
+  record_use 0.6.0 (1.1.1 available)
+  test_api 0.7.12 (0.7.15 available)
+  vector_math 2.4.0 (2.4.3 available)
+  video_player_avfoundation 2.12.0 (2.12.1 available)
+Got dependencies!
+14 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+00:00 +0: loading /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/features_test.dart
+00:00 +0: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/features_test.dart: Catálogo local omite MP4 ausentes
+00:00 +1: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/features_test.dart: Los 13 MP4 aparecen en orden natural y nuevos archivos se detectan
+00:00 +2: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/features_test.dart: Bundle real incluye los 13 videos sin depender del catálogo de ocho
+00:00 +3: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/features_test.dart: Variante compatible conserva identidad y fallback de assets nuevos
+00:00 +4: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/features_test.dart: Sonido activo por defecto y mute explícito persiste
+00:00 +5: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/features_test.dart: Unmute y refresco de fecha no repiten la melodía
+00:00 +6: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/features_test.dart: Temporadas y límites de fechas
+00:00 +7: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/features_test.dart: Like suma, persiste, resta y se reactiva sin duplicar
+00:00 +8: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/features_test.dart: Escrituras concurrentes conservan favoritos y preferencias
+00:00 +9: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/features_test.dart: Override de temporada persiste y automático elimina override
+00:00 +10: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/features_test.dart: Descubrir excluye locales aunque una fuente los devuelva
+00:00 +11: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/features_test.dart: Favoritos conserva locales y remotos de ambas secciones
+00:03 +12: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/remote_videos_test.dart: Wikimedia pagina más de seis clips, sin claves ni tutoriales
+00:03 +12 ~1: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/remote_videos_test.dart: Wikimedia pagina más de seis clips, sin claves ni tutoriales
+00:03 +13 ~1: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/remote_videos_test.dart: Wikimedia omite horizontal, silencioso, largo y contenido ajeno
+00:03 +14 ~1: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/remote_videos_test.dart: Variante QuickTime conserva formato nativo para plataformas Apple
+00:03 +15 ~1: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/remote_videos_test.dart: Descubrir consulta tres APIs públicas sin claves
+00:03 +16 ~1: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/remote_videos_test.dart: Resultados rápidos aparecen antes de terminar la fuente lenta
+00:03 +17 ~1: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/remote_videos_test.dart: PeerTube elige HLS ligero con sonido antes del MP4 pesado
+00:03 +18 ~1: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/remote_videos_test.dart: PeerTube omite horizontales, silenciosos y páginas vacías
+00:03 +19 ~1: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/remote_videos_test.dart: PeerTube exige pista sonora y prefiere 720p
+00:03 +20 ~1: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/remote_videos_test.dart: Archive pagina más de seis y descarta MP4 sin audio
+00:03 +21 ~1: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/remote_videos_test.dart: Fallo de una API no bloquea las demás ni invade Para ti
+00:03 +22 ~1: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/remote_videos_test.dart: Para ti conserva los 13 locales sin consultar la API de Descubrir
+00:03 +23 ~1: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/app_icon_test.dart: Iconos disponibles corresponden a las temporadas y al fallback
+00:03 +24 ~1: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/widget_test.dart: Botones actualizan likes y sonido persistentes
+00:03 +25 ~1: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/widget_test.dart: Botones actualizan likes y sonido persistentes
+00:03 +26 ~1: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/widget_test.dart: Botones actualizan likes y sonido persistentes
+00:03 +27 ~1: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/widget_test.dart: Botones actualizan likes y sonido persistentes
+00:03 +28 ~1: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/widget_test.dart: Botones actualizan likes y sonido persistentes
+00:04 +29 ~1: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/widget_test.dart: Selector fuerza temporada y vuelve al modo automático
+00:05 +30 ~1: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/widget_test.dart: Descripción larga se expande y permite desplazarse
+00:05 +31 ~1: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/widget_test.dart: Descripción breve se muestra sin botón más
+00:05 +32 ~1: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/widget_test.dart: Swipe vertical cambia video y la descripción tiene scroll independiente
+00:05 +33 ~1: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/widget_test.dart: Para ti sigue accesible mientras Descubrir espera la red
+00:05 +34 ~1: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/widget_test.dart: Swipe lateral cambia sección y carga su repository
+00:05 +35 ~1: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/widget_test.dart: Precarga solo actual y siguiente, sin audio y reutiliza al avanzar
+00:05 +36 ~1: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/widget_test.dart: Mute y unmute solo cambian volumen, incluso al refrescar
+00:05 +37 ~1: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/widget_test.dart: Toque pausa y reanuda fuentes externas sin que mute revierta la pausa
+00:05 +38 ~1: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/widget_test.dart: Reproduce variante local compatible sin perder identidad ni audio
+00:05 +39 ~1: /Users/adrian/Documents/Practicas_DMI_230052/Practica04/Appetize/toktik/test/widget_test.dart: Splash muestra el icono de la temporada persistida
+00:05 +40 ~1: All tests passed!

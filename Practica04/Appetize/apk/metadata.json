@@ -1,0 +1,22 @@
+{
+  "archivo": "vdry-toktik-release.apk",
+  "fecha": "2026-10-13",
+  "bytes": 326063566,
+  "MB": 326.06,
+  "sha256": "7cfb0351c10b95f9324aa35e73e2dd57cf262adac63b766d6ddb8fc2c6f9e43a",
+  "applicationId": "com.example.toktik",
+  "label": "Vdry",
+  "versionName": "1.0.0",
+  "versionCode": 1,
+  "build": "release",
+  "firma": "debug local del proyecto",
+  "videos": 13,
+  "arquitecturas_flutter": [
+    "arm64-v8a",
+    "armeabi-v7a",
+    "x86_64"
+  ],
+  "minSdk": 24,
+  "targetSdk": 36,
+  "appetizeUrl": "https://appetize.io/app/b_iwtk5jwhmh6nti6syvn43pq5s4"
+}

@@ -179,3 +179,35 @@ flutter test test/public_api_live_check_test.dart --dart-define=VERIFY_PUBLIC_AP
 ```
 
 No se requiere un archivo de claves para ejecutar la aplicación. Los cambios en recursos nativos, iconos o splash necesitan recompilar e instalar la app; hot reload permite revisar cambios de Dart, pero no incorpora esas configuraciones nativas.
+
+
+## Publicación de TokTik / Vdry en Appetize
+
+La aplicación utilizada para la publicación en la nube es **TokTik / Vdry** (`com.example.toktik`). El paquete de entrega se preparó en [Appetize](./Appetize/), con una copia Android del proyecto, APK release y evidencias del análisis, pruebas y ejecución virtual.
+
+Desde la raíz del repositorio:
+
+```sh
+cd Practica04/Appetize/toktik
+flutter pub get
+flutter analyze
+flutter test --reporter expanded
+flutter build apk --release
+```
+
+El análisis estático terminó sin incidencias y las **40 pruebas existentes** pasaron. La comprobación independiente de las **tres APIs reales** también pasó: PeerTube, Internet Archive y Wikimedia devolvieron enlaces de videos. Para el catálogo local del APK se recuperaron los **13 videos compatibles del APK de depuración anterior**, ya que la carpeta de assets estaba vacía al comenzar; se incluyen una sola vez.
+
+El estado de publicación, enlace compartible, capturas de los dispositivos y las incidencias están en [Documentación de Appetize](./Appetize/README.md). El APK local se entrega en [vdry-toktik-release.apk](./Appetize/apk/vdry-toktik-release.apk).
+
+**Enlace compartible de Vdry:** [Ejecutar TokTik en Appetize](https://appetize.io/app/b_iwtk5jwhmh6nti6syvn43pq5s4). El APK release versión 1.0.0 pesa **326.06 MB** y fue procesado correctamente por Appetize.
+
+
+### Resultados de las pruebas en la nube
+
+Se ejecutó el APK en **Pixel 7 y Pixel Tablet, ambos con Android 13**. Se verificaron reproducción local y remota, pausa y reanudación, avance vertical, guardado en Favoritos, mute y cambios de temporada. No se observaron componentes recortados. La app conserva la orientación vertical al girar el marco del emulador. Las capturas y el alcance de cada comprobación están en el README de Appetize.
+
+| Pixel 7 | Pixel Tablet |
+| --- | --- |
+| ![Vdry en teléfono](./Appetize/evidencias/pixel7-local.jpg) | ![Vdry en tablet](./Appetize/evidencias/tablet-local.jpg) |
+
+El APK y los videos se mantienen localmente y se excluyen del seguimiento normal de Git por su tamaño. El enlace de Appetize permite demostrar la compilación publicada. La investigación de la plataforma permanece en la libreta.
